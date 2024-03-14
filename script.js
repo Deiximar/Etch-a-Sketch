@@ -14,6 +14,9 @@ function createGrid(rows, cels) {
     rows.forEach(row => {
       const cel = document.createElement('div');
       cel.classList.add('cel');
+      cel.addEventListener("mouseenter", (event) => {
+        event.target.style.backgroundColor = setBg(cel);
+      })
       row.appendChild(cel);
     });
   }
@@ -36,4 +39,9 @@ function removeDOMELement() {
   rows.forEach(row => {
     row.remove();
   });
+}
+
+const setBg = (cel) => {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  cel.style.backgroundColor = "#" + randomColor;
 }
