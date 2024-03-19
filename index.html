@@ -11,11 +11,26 @@
 </head>
 
 <body>
-  <h1>Echt a Sketch</h1>
-  <button onclick="setGrid()">Set a grid</button>
-  <div class="container">
+  <h1 class="title">Echt a Sketch</h1>
+
+  <div class="sketch-pad">
+    <div class="container">
+    </div>
+
+    <div class="control-panel">
+      <button onclick="setGrid()">Set a grid</button>
+      <button onclick="choiceColor('#000')">Black</button>
+      <button onclick="choiceColor('#808080')">Gray</button>
+      <button onclick="choiceColor('rainbow')">Rainbow</button>
+      <button onclick="choiceColor('#e0e0e0')">Erase</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+  </div>
 
   </div>
+
+
+
   <script src="script.js"></script>
 </body>
 
